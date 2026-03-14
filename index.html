@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janzo Labs — Research-Grade Peptides | BPC-157, TB-500, Retatrutide & More</title>
+  <meta name="description" content="Janzo Labs supplies 98%+ HPLC-verified research peptides — BPC-157, TB-500, Retatrutide, GHK-CU & more. COA on every batch. Ships within 24 hrs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Janzo Labs",
+    "url": "https://janzolabs.com",
+    "email": "orders@janzolabs.com",
+    "description": "Research-grade peptide compounds synthesized to 98%+ HPLC-verified purity for scientific research purposes.",
+    "sameAs": ["https://janzolabs.com"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is it legal to purchase research peptides?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "These compounds are legal to purchase for research purposes in the United States. They are classified as Research Use Only (RUO) and are not approved for human consumption."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are these products safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Safety profiles vary by compound. All Janzo Labs products are synthesized to 98%+ purity and tested for sterility. Researchers should review all available literature before use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long before I see results in my research?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research timelines vary by compound and subject. Most published studies show observable changes within 4–8 weeks of consistent protocol."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should these compounds be stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Store lyophilized peptides at -20°C for long-term stability. Once reconstituted, refrigerate at 4°C and use within 30 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What reconstitution and dosing guidelines are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Detailed reconstitution guides and dosing calculators are available on each product page. We recommend bacteriostatic water (BAC water) for reconstitution."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --navy: #0a0f1e;
+      --navy-light: #111827;
+      --teal: #00d4d4;
+      --teal-dark: #00a8a8;
+      --white: #ffffff;
+      --gray-100: #f3f4f6;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --radius-card: 8px;
+      --radius-btn: 4px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+      --transition: all 0.25s ease;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; font-family: inherit; border: none; }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      color: var(--gray-400);
+      font-size: 1.05rem;
+      max-width: 600px;
+    }
+    .teal { color: var(--teal); }
+    .btn-primary {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: var(--radius-btn);
+      transition: var(--transition);
+      letter-spacing: 0.02em;
+    }
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,212,212,0.3); }
+    .btn-outline {
+      display: inline-block;
+      border: 1.5px solid var(--teal);
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: var(--radius-btn);
+      transition: var(--transition);
+      background: transparent;
+    }
+    .btn-outline:hover { background: rgba(0,212,212,0.08); transform: translateY(-1px); }
+    .ruo-note { font-size: 0.7rem; color: var(--gray-400); font-style: italic; margin-top: 6px; }
+
+    /* ===== FADE-IN ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== 1. STICKY HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10,15,30,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+    .logo span { color: var(--teal); }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--gray-400);
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    nav a:hover { color: var(--white); }
+    .header-cta { font-size: 0.88rem; padding: 9px 18px; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: var(--navy-light);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 24px 20px;
+      gap: 16px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-size: 0.95rem; color: var(--gray-400); padding: 4px 0; }
+    .mobile-nav .btn-primary { text-align: center; }
+
+    /* ===== 2. HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--navy);
+    }
+    /* Animated CSS gradient background */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(0,212,212,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(0,168,168,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(0,212,212,0.04) 0%, transparent 50%);
+      animation: heroGlow 8s ease-in-out infinite alternate;
+    }
+    @keyframes heroGlow {
+      0% { opacity: 0.7; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.04); }
+    }
+    /* Grid lines overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,212,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,212,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, transparent 75%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 0 80px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      border: 1px solid rgba(0,212,212,0.3);
+      border-radius: 2px;
+      background: rgba(0,212,212,0.06);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+    .hero h1 em { font-style: normal; color: var(--teal); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--gray-400);
+      max-width: 600px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
+    .hero-ctas .btn-primary { font-size: 1rem; padding: 14px 28px; }
+    .hero-ctas .btn-outline { font-size: 1rem; padding: 14px 28px; }
+    .trust-bar {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+    .trust-item .check {
+      width: 18px;
+      height: 18px;
+      background: rgba(0,212,212,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .trust-item .check::before {
+      content: '✓';
+      font-size: 0.65rem;
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .compliance-badge {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      font-style: italic;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 16px;
+      max-width: 500px;
+    }
+
+    /* ===== 3. SOCIAL PROOF STRIP ===== */
+    .social-proof {
+      background: var(--navy-light);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 32px 0;
+    }
+    .social-proof-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .sp-rating { display: flex; flex-direction: column; gap: 4px; }
+    .sp-stars { color: #fbbf24; font-size: 1.1rem; letter-spacing: 2px; }
+    .sp-rating-text { font-size: 0.85rem; color: var(--gray-400); }
+    .sp-certs {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+    .sp-certs-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gray-600); }
+    .cert-badges { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .cert-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border: 1px solid rgba(0,212,212,0.3);
+      border-radius: 2px;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+    }
+    .sp-quote { text-align: right; }
+    .sp-quote blockquote {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      font-style: italic;
+      line-height: 1.6;
+      border-left: 2px solid var(--teal);
+      padding-left: 14px;
+      margin-left: auto;
+      max-width: 320px;
+    }
+    .sp-quote cite { display: block; font-style: normal; font-size: 0.75rem; color: var(--gray-600); margin-top: 6px; }
+
+    /* ===== 4. PRODUCTS SECTION ===== */
+    .products-section { padding: 96px 0; }
+    .section-header { margin-bottom: 56px; }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .product-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      position: relative;
+    }
+    .product-card:hover {
+      border-color: rgba(0,212,212,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,212,212,0.1);
+      transform: translateY(-3px);
+    }
+    .card-badges { display: flex; gap: 8px; align-items: center; }
+    .badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .badge-bestseller { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .badge-new { background: rgba(0,212,212,0.15); color: var(--teal); border: 1px solid rgba(0,212,212,0.3); }
+    .badge-ruo { background: rgba(156,163,175,0.08); color: var(--gray-600); border: 1px solid rgba(156,163,175,0.15); }
+    .card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .card-segment { display: flex; gap: 6px; flex-wrap: wrap; }
+    .segment-tag {
+      font-size: 0.68rem;
+      color: var(--teal);
+      border: 1px solid rgba(0,212,212,0.2);
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.04em;
+    }
+    .card-mechanism { font-size: 0.82rem; color: var(--gray-400); line-height: 1.6; }
+    .card-mechanism strong { color: var(--gray-100); display: block; margin-bottom: 4px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    .card-outcome { font-size: 0.82rem; color: var(--gray-400); line-height: 1.6; }
+    .card-outcome strong { color: var(--gray-100); display: block; margin-bottom: 4px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    .card-footer { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+    .card-price { font-size: 1.5rem; font-weight: 700; color: var(--white); }
+    .card-cta { text-align: center; padding: 10px 16px; font-size: 0.88rem; }
+    .card-ruo { font-size: 0.68rem; color: var(--gray-600); font-style: italic; text-align: center; }
+
+    /* Bundle */
+    .bundle-module {
+      border: 1.5px solid var(--teal);
+      border-radius: var(--radius-card);
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(0,212,212,0.04) 0%, transparent 60%), var(--navy-light);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+    .bundle-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .bundle-contents { font-size: 0.85rem; color: var(--gray-400); margin-bottom: 12px; }
+    .bundle-desc { font-size: 0.9rem; color: var(--gray-400); line-height: 1.6; max-width: 540px; }
+    .bundle-pricing { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+    .bundle-price { font-size: 2rem; font-weight: 700; color: var(--white); }
+    .bundle-original { font-size: 1rem; color: var(--gray-600); text-decoration: line-through; }
+    .bundle-save {
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(0,212,212,0.15);
+      color: var(--teal);
+      padding: 3px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,212,212,0.3);
+    }
+    .bundle-cta-wrap { text-align: center; }
+    .bundle-cta { font-size: 1.05rem; padding: 14px 32px; }
+
+    /* ===== 5. TRUST & CREDIBILITY ===== */
+    .trust-section { padding: 96px 0; background: var(--navy-light); }
+    .trust-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+    .trust-pillar {
+      background: var(--navy);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+    .pillar-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .pillar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+    .pillar-text { font-size: 0.85rem; color: var(--gray-400); line-height: 1.7; }
+
+    /* COA Mockup */
+    .coa-mockup {
+      margin-top: 20px;
+      border: 1px solid rgba(0,212,212,0.25);
+      border-radius: 6px;
+      padding: 16px;
+      background: rgba(0,212,212,0.03);
+      font-size: 0.72rem;
+    }
+    .coa-header {
+      text-align: center;
+      color: var(--teal);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 0.68rem;
+      border-bottom: 1px solid rgba(0,212,212,0.15);
+      padding-bottom: 8px;
+    }
+    .coa-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 3px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.05);
+      color: var(--gray-400);
+    }
+    .coa-row:last-child { border-bottom: none; }
+    .coa-row .pass { color: #34d399; font-weight: 600; }
+
+    /* FAQ */
+    .faq-section { margin-top: 0; }
+    .faq-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-item {
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--navy);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+      gap: 16px;
+    }
+    .faq-question:hover { background: rgba(255,255,255,0.02); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border: 1.5px solid rgba(0,212,212,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--teal);
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    /* ===== 6. HOW PEPTIDES WORK ===== */
+    .science-section { padding: 96px 0; }
+    .science-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 56px;
+      position: relative;
+    }
+    .science-steps::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(16.66% + 20px);
+      right: calc(16.66% + 20px);
+      height: 1px;
+      background: linear-gradient(90deg, var(--teal), rgba(0,212,212,0.3), var(--teal));
+    }
+    .science-step {
+      text-align: center;
+      padding: 0 32px;
+      position: relative;
+    }
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .step-icon-wrap {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(0,212,212,0.08);
+      border: 1.5px solid rgba(0,212,212,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2rem;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .science-step:hover .step-icon-wrap {
+      background: rgba(0,212,212,0.14);
+      border-color: rgba(0,212,212,0.5);
+    }
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .step-desc { font-size: 0.85rem; color: var(--gray-400); line-height: 1.7; }
+
+    /* ===== 7. TESTIMONIALS ===== */
+    .testimonials-section { padding: 96px 0; background: var(--navy-light); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .testimonial-card {
+      background: var(--navy);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: var(--shadow);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .testimonial-card:hover { border-color: rgba(0,212,212,0.2); transform: translateY(-2px); }
+    .testimonial-stars { color: #fbbf24; font-size: 0.9rem; letter-spacing: 2px; }
+    .testimonial-quote {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      line-height: 1.75;
+      font-style: italic;
+    }
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after { content: '\201D'; }
+    .testimonial-author { display: flex; flex-direction: column; gap: 4px; }
+    .author-name { font-weight: 600; font-size: 0.95rem; }
+    .author-label { font-size: 0.75rem; color: var(--gray-600); }
+    .metric-badge {
+      display: inline-block;
+      background: rgba(0,212,212,0.1);
+      border: 1px solid rgba(0,212,212,0.25);
+      color: var(--teal);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 10px;
+      align-self: flex-start;
+    }
+
+    /* ===== 8. URGENCY CTA ===== */
+    .urgency-section {
+      padding: 96px 0;
+      background: linear-gradient(135deg, var(--navy) 0%, #0d1a2e 50%, var(--navy) 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .urgency-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,212,212,0.06) 0%, transparent 65%);
+    }
+    .urgency-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+    .urgency-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .urgency-sub { font-size: 1.05rem; color: var(--gray-400); margin-bottom: 24px; }
+    .urgency-stock {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: #fbbf24;
+      background: rgba(251,191,36,0.08);
+      border: 1px solid rgba(251,191,36,0.2);
+      padding: 8px 16px;
+      border-radius: var(--radius-btn);
+      margin-bottom: 32px;
+    }
+    .urgency-cta { font-size: 1.1rem; padding: 16px 36px; margin-bottom: 16px; }
+    .urgency-reassurance { font-size: 0.8rem; color: var(--gray-600); margin-bottom: 24px; }
+    .urgency-secondary { font-size: 0.88rem; color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+    .urgency-secondary:hover { color: var(--teal-dark); }
+
+    /* ===== 9. FOOTER ===== */
+    footer {
+      background: #070b16;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo { font-size: 1.2rem; margin-bottom: 12px; }
+    .footer-tagline { font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; max-width: 220px; }
+    .footer-col-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.82rem; color: var(--gray-600); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact { font-size: 0.82rem; color: var(--gray-600); line-height: 1.8; }
+    .footer-contact a { color: var(--teal); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .footer-disclaimer {
+      font-size: 0.72rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 900px;
+    }
+    .footer-copy { font-size: 0.78rem; color: var(--gray-600); }
+
+    /* ===== 10. EXIT-INTENT POPUP ===== */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+    .popup-overlay.active { display: flex; }
+    .popup-modal {
+      background: var(--navy-light);
+      border: 1px solid rgba(0,212,212,0.2);
+      border-radius: 12px;
+      padding: 48px 40px;
+      max-width: 460px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+      animation: popupIn 0.3s ease;
+    }
+    @keyframes popupIn {
+      from { opacity: 0; transform: scale(0.95) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .popup-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      color: var(--gray-600);
+      font-size: 1.4rem;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .popup-close:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+    .popup-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .popup-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .popup-sub { font-size: 0.88rem; color: var(--gray-400); margin-bottom: 24px; line-height: 1.6; }
+    .popup-form { display: flex; flex-direction: column; gap: 12px; }
+    .popup-input {
+      background: var(--navy);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-btn);
+      padding: 13px 16px;
+      font-size: 0.92rem;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .popup-input::placeholder { color: var(--gray-600); }
+    .popup-input:focus { outline: none; border-color: var(--teal); }
+    .popup-submit { padding: 13px; font-size: 0.95rem; border-radius: var(--radius-btn); }
+    .popup-fine { font-size: 0.72rem; color: var(--gray-600); text-align: center; margin-top: 4px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .trust-pillars { grid-template-columns: 1fr; }
+      .science-steps::before { display: none; }
+      .science-steps { grid-template-columns: 1fr; gap: 40px; }
+      .science-step { text-align: left; display: flex; align-items: flex-start; gap: 20px; padding: 0; }
+      .step-icon-wrap { flex-shrink: 0; }
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .header-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { padding: 100px 0 60px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .social-proof-inner { grid-template-columns: 1fr; gap: 24px; }
+      .sp-quote { text-align: left; }
+      .sp-quote blockquote { margin-left: 0; }
+      .bundle-module { grid-template-columns: 1fr; }
+      .bundle-cta-wrap { text-align: left; }
+      .trust-pillars { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 540px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn-primary, .hero-ctas .btn-outline { text-align: center; }
+      .trust-bar { gap: 16px; }
+      .popup-modal { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== 1. STICKY HEADER ===== -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://janzolabs.com" class="logo">JANZO <span>LABS</span></a>
+        <nav>
+          <a href="https://janzolabs.com/shop/">Products</a>
+          <a href="https://janzolabs.com/lab-results/">Lab Results</a>
+          <a href="#faq">FAQs</a>
+          <a href="mailto:orders@janzolabs.com">Contact</a>
+        </nav>
+        <a href="https://janzolabs.com/shop/" class="btn-primary header-cta">Build My Stack &rarr;</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="https://janzolabs.com/shop/">Products</a>
+      <a href="https://janzolabs.com/lab-results/">Lab Results</a>
+      <a href="#faq">FAQs</a>
+      <a href="mailto:orders@janzolabs.com">Contact</a>
+      <a href="https://janzolabs.com/shop/" class="btn-primary">Build My Stack &rarr;</a>
+    </nav>
+  </header>
+
+  <!-- ===== 2. HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">Pharmaceutical-Grade Peptide Research</div>
+      <h1>Recover Faster. Age Slower.<br><em>Perform</em> at Your Peak.</h1>
+      <p class="hero-sub">Janzo Labs synthesizes precision BPC-157 Peptide compounds with 98%+ HPLC-verified purity — engineered for researchers who demand results.</p>
+      <div class="hero-ctas">
+        <a href="https://janzolabs.com/shop/" class="btn-primary">Build My Stack &rarr;</a>
+        <a href="https://janzolabs.com/lab-results/" class="btn-outline">View Lab Results</a>
+      </div>
+      <div class="trust-bar">
+        <div class="trust-item"><span class="check"></span>98%+ Purity Guaranteed</div>
+        <div class="trust-item"><span class="check"></span>HPLC 3rd-Party Tested</div>
+        <div class="trust-item"><span class="check"></span>COA Available</div>
+        <div class="trust-item"><span class="check"></span>Ships in 24hrs</div>
+      </div>
+      <p class="compliance-badge">For research use only. Not for human consumption. All compounds are sold exclusively for in vitro and laboratory research applications.</p>
+    </div>
+  </section>
+
+  <!-- ===== 3. SOCIAL PROOF STRIP ===== -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="social-proof-inner fade-in">
+        <div class="sp-rating">
+          <div class="sp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="sp-rating-text">4.9/5 from 2,400+ researchers</div>
+        </div>
+        <div class="sp-certs">
+          <div class="sp-certs-label">Verified Standards</div>
+          <div class="cert-badges">
+            <span class="cert-badge">ISO Certified</span>
+            <span class="cert-badge">FDA-Registered</span>
+            <span class="cert-badge">HPLC Verified</span>
+          </div>
+        </div>
+        <div class="sp-quote">
+          <blockquote>
+            The purity verification and fast delivery make Janzo my only source.
+            <cite>— Dr. M. Torres, Research Biochemist</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. PRODUCTS SECTION ===== -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Research-Grade Compounds</h2>
+        <p class="section-subtitle">Every compound is synthesized to 98%+ purity and shipped with a Certificate of Analysis. For research purposes only.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Card 1: BPC-157 -->
+        <div class="product-card fade-in">
+          <div class="card-badges">
+            <span class="badge badge-bestseller">Bestseller</span>
+            <span class="badge badge-ruo">RUO</span>
+          </div>
+          <div class="card-name">BPC-157 5mg</div>
+          <div class="card-segment">
+            <span class="segment-tag">Performance</span>
+            <span class="segment-tag">Recovery</span>
+          </div>
+          <div class="card-mechanism">
+            <strong>Mechanism</strong>
+            Upregulates growth factors and angiogenesis to accelerate tissue repair at the cellular level.
+          </div>
+          <div class="card-outcome">
+            <strong>Research Outcomes</strong>
+            Researchers report faster recovery from musculoskeletal injuries and reduced inflammation markers.
+          </div>
+          <div class="card-footer">
+            <div class="card-price">$64.99</div>
+            <a href="https://janzolabs.com/shop/" class="btn-primary card-cta">Add to Stack &rarr;</a>
+            <div class="card-ruo">For research purposes only</div>
+          </div>
+        </div>
+
+        <!-- Card 2: TB-500 -->
+        <div class="product-card fade-in">
+          <div class="card-badges">
+            <span class="badge badge-ruo">RUO</span>
+          </div>
+          <div class="card-name">TB-500 (Thymosin Beta-4) 5mg</div>
+          <div class="card-segment">
+            <span class="segment-tag">Recovery</span>
+            <span class="segment-tag">Endurance</span>
+          </div>
+          <div class="card-mechanism">
+            <strong>Mechanism</strong>
+            Promotes actin upregulation and cell migration, supporting systemic tissue regeneration.
+          </div>
+          <div class="card-outcome">
+            <strong>Research Outcomes</strong>
+            Enhanced flexibility, accelerated healing, and improved endurance in research subjects.
+          </div>
+          <div class="card-footer">
+            <div class="card-price">$64.99</div>
+            <a href="https://janzolabs.com/shop/" class="btn-primary card-cta">Add to Stack &rarr;</a>
+            <div class="card-ruo">For research purposes only</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Retatrutide -->
+        <div class="product-card fade-in">
+          <div class="card-badges">
+            <span class="badge badge-new">New</span>
+            <span class="badge badge-ruo">RUO</span>
+          </div>
+          <div class="card-name">Retatrutide 10mg</div>
+          <div class="card-segment">
+            <span class="segment-tag">Metabolic</span>
+            <span class="segment-tag">Longevity</span>
+          </div>
+          <div class="card-mechanism">
+            <strong>Mechanism</strong>
+            Triple agonist targeting GLP-1, GIP, and glucagon receptors for metabolic modulation.
+          </div>
+          <div class="card-outcome">
+            <strong>Research Outcomes</strong>
+            Significant improvements in body composition and metabolic markers observed in research.
+          </div>
+          <div class="card-footer">
+            <div class="card-price">$129.99</div>
+            <a href="https://janzolabs.com/shop/" class="btn-primary card-cta">Add to Stack &rarr;</a>
+            <div class="card-ruo">For research purposes only</div>
+          </div>
+        </div>
+
+        <!-- Card 4: GHK-CU -->
+        <div class="product-card fade-in">
+          <div class="card-badges">
+            <span class="badge badge-ruo">RUO</span>
+          </div>
+          <div class="card-name">GHK-CU 50mg</div>
+          <div class="card-segment">
+            <span class="segment-tag">Anti-Aging</span>
+            <span class="segment-tag">Longevity</span>
+          </div>
+          <div class="card-mechanism">
+            <strong>Mechanism</strong>
+            Copper peptide complex that activates collagen synthesis and antioxidant gene expression.
+          </div>
+          <div class="card-outcome">
+            <strong>Research Outcomes</strong>
+            Visible improvements in skin density, wound healing, and anti-inflammatory response.
+          </div>
+          <div class="card-footer">
+            <div class="card-price">$64.99</div>
+            <a href="https://janzolabs.com/shop/" class="btn-primary card-cta">Add to Stack &rarr;</a>
+            <div class="card-ruo">For research purposes only</div>
+          </div>
+        </div>
+
+        <!-- Card 5: Semax -->
+        <div class="product-card fade-in">
+          <div class="card-badges">
+            <span class="badge badge-ruo">RUO</span>
+          </div>
+          <div class="card-name">Semax 10mg</div>
+          <div class="card-segment">
+            <span class="segment-tag">Cognitive</span>
+            <span class="segment-tag">Performance</span>
+          </div>
+          <div class="card-mechanism">
+            <strong>Mechanism</strong>
+            ACTH-derived peptide that upregulates BDNF and enhances dopaminergic neurotransmission.
+          </div>
+          <div class="card-outcome">
+            <strong>Research Outcomes</strong>
+            Improved cognitive clarity, focus, and neuroprotective effects in research applications.
+          </div>
+          <div class="card-footer">
+            <div class="card-price">$59.99</div>
+            <a href="https://janzolabs.com/shop/" class="btn-primary card-cta">Add to Stack &rarr;</a>
+            <div class="card-ruo">For research purposes only</div>
+          </div>
+        </div>
+
+        <!-- Card 6: PT-141 -->
+        <div class="product-card fade-in">
+          <div class="card-badges">
+            <span class="badge badge-ruo">RUO</span>
+          </div>
+          <div class="card-name">PT-141 (Bremelanotide) 10mg</div>
+          <div class="card-segment">
+            <span class="segment-tag">Wellness</span>
+            <span class="segment-tag">Performance</span>
+          </div>
+          <div class="card-mechanism">
+            <strong>Mechanism</strong>
+            Melanocortin receptor agonist acting on the CNS to modulate sexual arousal pathways.
+          </div>
+          <div class="card-outcome">
+            <strong>Research Outcomes</strong>
+            Research demonstrates significant improvements in desire and arousal response metrics.
+          </div>
+          <div class="card-footer">
+            <div class="card-price">$49.99</div>
+            <a href="https://janzolabs.com/shop/" class="btn-primary card-cta">Add to Stack &rarr;</a>
+            <div class="card-ruo">For research purposes only</div>
+          </div>
+        </div>
+
+      </div><!-- /product-grid -->
+
+      <!-- Bundle Module -->
+      <div class="bundle-module fade-in">
+        <div class="bundle-info">
+          <div class="bundle-title">&#9889; The Ultimate Recovery Stack</div>
+          <div class="bundle-contents">BPC-157 5mg + TB-500 5mg</div>
+          <div class="bundle-pricing">
+            <div class="bundle-price">$109.99</div>
+            <div class="bundle-original">$129.98</div>
+            <div class="bundle-save">Save 15%</div>
+          </div>
+          <p class="bundle-desc">The most researched peptide pairing for accelerated recovery and tissue regeneration. Stack them together for compounded results.</p>
+          <p class="ruo-note" style="margin-top:12px;">For research purposes only. Not for human consumption.</p>
+        </div>
+        <div class="bundle-cta-wrap">
+          <a href="https://janzolabs.com/shop/" class="btn-primary bundle-cta">Get the Bundle &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 5. TRUST & CREDIBILITY ===== -->
+  <section class="trust-section" id="lab-results">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Why Researchers Choose Janzo Labs</h2>
+        <p class="section-subtitle">Our quality standards are non-negotiable. Every compound. Every batch. Every time.</p>
+      </div>
+      <div class="trust-pillars">
+
+        <div class="trust-pillar fade-in">
+          <div class="pillar-icon">&#128203;</div>
+          <div class="pillar-title">HPLC-Verified Purity</div>
+          <p class="pillar-text">Every batch is tested via High-Performance Liquid Chromatography. Results are published and COA is available on every product page.</p>
+          <div class="coa-mockup">
+            <div class="coa-header">Certificate of Analysis &mdash; Janzo Labs</div>
+            <div class="coa-row"><span>Compound</span><span>BPC-157 5mg</span></div>
+            <div class="coa-row"><span>Batch ID</span><span>JL-2024-0391</span></div>
+            <div class="coa-row"><span>Test Method</span><span>HPLC-UV</span></div>
+            <div class="coa-row"><span>Purity Result</span><span class="pass">99.1% &#10003;</span></div>
+            <div class="coa-row"><span>Sterility</span><span class="pass">Pass &#10003;</span></div>
+            <div class="coa-row"><span>Heavy Metals</span><span class="pass">ND &#10003;</span></div>
+          </div>
+        </div>
+
+        <div class="trust-pillar fade-in">
+          <div class="pillar-icon">&#127963;</div>
+          <div class="pillar-title">FDA-Registered Facility</div>
+          <p class="pillar-text">Synthesized in a U.S.-based FDA-registered facility under strict GMP conditions. Our manufacturing standards meet and exceed industry requirements for research compounds.</p>
+          <div style="margin-top:20px; display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; align-items:center; gap:10px; font-size:0.8rem; color:var(--gray-400);">
+              <span style="color:var(--teal); font-size:1rem;">&#10003;</span> GMP-Compliant Manufacturing
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-size:0.8rem; color:var(--gray-400);">
+              <span style="color:var(--teal); font-size:1rem;">&#10003;</span> U.S.-Based Synthesis
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-size:0.8rem; color:var(--gray-400);">
+              <span style="color:var(--teal); font-size:1rem;">&#10003;</span> Rigorous Batch Records
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-size:0.8rem; color:var(--gray-400);">
+              <span style="color:var(--teal); font-size:1rem;">&#10003;</span> Independent Third-Party Testing
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-pillar fade-in">
+          <div class="pillar-icon">&#128737;</div>
+          <div class="pillar-title">Satisfaction Guarantee</div>
+          <p class="pillar-text">If independent HPLC testing returns below 98% purity, we'll refund 100% of your order — including testing costs. Our purity is guaranteed, not just claimed.</p>
+          <div style="margin-top:20px; background:rgba(0,212,212,0.06); border:1px solid rgba(0,212,212,0.2); border-radius:6px; padding:16px;">
+            <div style="font-size:0.78rem; color:var(--teal); font-weight:700; margin-bottom:6px; letter-spacing:0.06em; text-transform:uppercase;">Our Promise</div>
+            <div style="font-size:0.82rem; color:var(--gray-400); line-height:1.6;">Below 98% purity on independent testing? Full refund including your testing costs. No questions asked.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="faq-section" id="faq">
+        <h3 class="faq-title fade-in">Frequently Asked Questions</h3>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              Is it legal to purchase research peptides?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                These compounds are legal to purchase for research purposes in the United States. They are classified as Research Use Only (RUO) and are not approved for human consumption.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              Are these products safe?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Safety profiles vary by compound. All Janzo Labs products are synthesized to 98%+ purity and tested for sterility. Researchers should review all available literature before use.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              How long before I see results in my research?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Research timelines vary by compound and subject. Most published studies show observable changes within 4–8 weeks of consistent protocol.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              How should these compounds be stored?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Store lyophilized peptides at -20&deg;C for long-term stability. Once reconstituted, refrigerate at 4&deg;C and use within 30 days.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              What reconstitution and dosing guidelines are available?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Detailed reconstitution guides and dosing calculators are available on each product page. We recommend bacteriostatic water (BAC water) for reconstitution.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 6. SCIENCE EDUCATION ===== -->
+  <section class="science-section">
+    <div class="container">
+      <div class="section-header fade-in" style="text-align:center; max-width:640px; margin:0 auto 0;">
+        <h2 class="section-title">The Science Behind the Results</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Understanding how peptides work at the molecular level.</p>
+      </div>
+      <div class="science-steps">
+
+        <div class="science-step fade-in">
+          <div>
+            <div class="step-number">Step 01</div>
+            <div class="step-icon-wrap">&#10019;</div>
+          </div>
+          <div>
+            <div class="step-title">Amino Acid Chains</div>
+            <p class="step-desc">Peptides are short chains of 2–50 amino acids — the same building blocks your body uses naturally. Think of them as precise biological keys.</p>
+          </div>
+        </div>
+
+        <div class="science-step fade-in">
+          <div>
+            <div class="step-number">Step 02</div>
+            <div class="step-icon-wrap">&#9741;</div>
+          </div>
+          <div>
+            <div class="step-title">Cellular Signaling</div>
+            <p class="step-desc">These chains bind to specific cell receptors, triggering targeted biological responses: tissue repair, hormone release, neural growth, and more.</p>
+          </div>
+        </div>
+
+        <div class="science-step fade-in">
+          <div>
+            <div class="step-number">Step 03</div>
+            <div class="step-icon-wrap">&#128737;</div>
+          </div>
+          <div>
+            <div class="step-title">Purity = Efficacy</div>
+            <p class="step-desc">Impurities block receptor binding. Pharmaceutical-grade 98%+ purity ensures maximum receptor affinity and predictable research outcomes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Trusted Across Research Communities</h2>
+        <p class="section-subtitle">From elite athletes to longevity researchers — verified results across protocols.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">I've been researching BPC-157 and TB-500 stacks for 18 months. The purity consistency from Janzo is unmatched — every COA checks out independently. My recovery protocols have never been more efficient.</p>
+          <div class="testimonial-author">
+            <div class="author-name">Marcus T.</div>
+            <div class="author-label">Competitive Powerlifter | 5x National Qualifier</div>
+          </div>
+          <div class="metric-badge">&#8595; 40% Recovery Time</div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">At 54, my research into GHK-CU and Selank has produced measurable improvements in my biomarker panel. My CRP is down, collagen synthesis markers are elevated, and cognitive scores have improved significantly.</p>
+          <div class="testimonial-author">
+            <div class="author-name">Dr. Sandra K.</div>
+            <div class="author-label">Age 54 | Functional Medicine Researcher</div>
+          </div>
+          <div class="metric-badge">Biomarkers Optimized at 54</div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">I've cycled through every major supplier over 6 years. Janzo Labs is the only source where independent mass spec results consistently match their COA. That level of verification is non-negotiable in serious research.</p>
+          <div class="testimonial-author">
+            <div class="author-name">James R.</div>
+            <div class="author-label">Biohacker | Longevity Protocol Developer</div>
+          </div>
+          <div class="metric-badge">6 Years of Verified Results</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. URGENCY + FINAL CTA ===== -->
+  <section class="urgency-section">
+    <div class="container">
+      <div class="urgency-content fade-in">
+        <h2 class="urgency-headline">Your Research Stack is Waiting.</h2>
+        <p class="urgency-sub">Free shipping on orders over $200. Most orders ship within 24 hours.</p>
+        <div class="urgency-stock">&#9888; Retatrutide and PT-141 are running low &mdash; quantities are limited.</div>
+        <div>
+          <a href="https://janzolabs.com/shop/" class="btn-primary urgency-cta" style="display:inline-block;">Build My Stack &rarr;</a>
+        </div>
+        <p class="urgency-reassurance">No subscription required. Discreet packaging. Verified purity on every order.</p>
+        <a href="https://janzolabs.com/shop/" class="urgency-secondary">Not sure where to start? Take the compound quiz &rarr;</a>
+        <p class="ruo-note" style="margin-top:20px; text-align:center;">For research purposes only. Not for human consumption.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">JANZO <span>LABS</span></div>
+          <p class="footer-tagline">Precision peptides for serious researchers. 98%+ purity. Verified. Guaranteed.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <div class="footer-links">
+            <a href="https://janzolabs.com/shop/">All Products</a>
+            <a href="https://janzolabs.com/lab-results/">Lab Results</a>
+            <a href="https://janzolabs.com/shop/">BPC-157</a>
+            <a href="https://janzolabs.com/shop/">TB-500</a>
+            <a href="https://janzolabs.com/shop/">Retatrutide</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Policies</div>
+          <div class="footer-links">
+            <a href="https://janzolabs.com/shipping/">Shipping Policy</a>
+            <a href="https://janzolabs.com/returns/">Returns</a>
+            <a href="https://janzolabs.com/privacy/">Privacy Policy</a>
+            <a href="https://janzolabs.com/terms/">Terms of Service</a>
+            <a href="https://janzolabs.com/ruo/">RUO Policy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact">
+            <div>Email: <a href="mailto:orders@janzolabs.com">orders@janzolabs.com</a></div>
+            <div style="margin-top:8px;">Orders ship within 24 hours. Free shipping on orders over $200.</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          <strong style="color:var(--gray-400);">Research Use Only (RUO) Disclaimer:</strong> All products sold by Janzo Labs are intended for laboratory and research purposes only. These compounds are not approved by the FDA for human consumption, therapeutic use, or veterinary use. They are not drugs, supplements, or food products. Janzo Labs makes no claims about the safety or efficacy of these compounds for use in humans or animals. By purchasing from Janzo Labs, you confirm that you are a qualified researcher and that all compounds will be used solely in a research capacity in compliance with all applicable local, state, and federal laws. Janzo Labs assumes no liability for misuse of any research compound.
+        </p>
+        <div class="footer-copy">&copy; 2026 Janzo Labs. All rights reserved. | janzolabs.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== 10. EXIT-INTENT POPUP ===== -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-modal" role="dialog" aria-modal="true" aria-labelledby="popupHeadline">
+      <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
+      <div class="popup-eyebrow">Limited Time Offer</div>
+      <h2 class="popup-headline" id="popupHeadline">Before You Go&hellip;</h2>
+      <p class="popup-sub">Get 10% off your first order. Enter your email below and we'll send your discount code instantly.</p>
+      <form class="popup-form" id="popupForm">
+        <input type="email" class="popup-input" placeholder="your@email.com" required aria-label="Email address" />
+        <button type="submit" class="btn-primary popup-submit">Claim My 10% Off</button>
+      </form>
+      <p class="popup-fine">No spam. Unsubscribe anytime. For research use only.</p>
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ---- Mobile nav toggle ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    // ---- FAQ Accordion ----
+    document.querySelectorAll('.faq-question').forEach(function(question) {
+      question.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('open');
+        });
+        // Toggle clicked
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // ---- IntersectionObserver fade-in ----
+    var fadeEls = document.querySelectorAll('.fade-in');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+
+    // ---- Exit-intent popup ----
+    var popupShown = sessionStorage.getItem('janzo_popup_shown');
+    var popupOverlay = document.getElementById('popupOverlay');
+    var popupClose = document.getElementById('popupClose');
+    var popupForm = document.getElementById('popupForm');
+
+    if (!popupShown) {
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY <= 20 && !sessionStorage.getItem('janzo_popup_shown')) {
+          popupOverlay.classList.add('active');
+          sessionStorage.setItem('janzo_popup_shown', '1');
+        }
+      });
+    }
+
+    popupClose.addEventListener('click', function() {
+      popupOverlay.classList.remove('active');
+    });
+
+    popupOverlay.addEventListener('click', function(e) {
+      if (e.target === popupOverlay) {
+        popupOverlay.classList.remove('active');
+      }
+    });
+
+    popupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = popupForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Code Sent! Check Your Inbox.';
+      btn.style.background = '#34d399';
+      btn.disabled = true;
+      setTimeout(function() {
+        popupOverlay.classList.remove('active');
+      }, 2200);
+    });
+
+    // Escape key closes popup
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        popupOverlay.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
