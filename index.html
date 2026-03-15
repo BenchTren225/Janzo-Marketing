@@ -167,14 +167,8 @@
       justify-content: space-between;
       height: 68px;
     }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--white);
-    }
-    .logo span { color: var(--teal); }
+    .logo { display: flex; align-items: center; }
+    .logo-img { height: 40px; width: auto; display: block; }
     nav { display: flex; align-items: center; gap: 32px; }
     nav a {
       font-size: 0.88rem;
@@ -727,7 +721,8 @@
       gap: 48px;
       margin-bottom: 48px;
     }
-    .footer-brand .logo { font-size: 1.2rem; margin-bottom: 12px; }
+    .footer-brand .logo { margin-bottom: 12px; }
+    .footer-brand .logo-img { height: 32px; }
     .footer-tagline { font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; max-width: 220px; }
     .footer-col-title {
       font-size: 0.75rem;
@@ -871,7 +866,9 @@
   <header>
     <div class="container">
       <div class="header-inner">
-        <a href="https://janzolabs.com" class="logo">JANZO <span>LABS</span></a>
+        <a href="https://janzolabs.com" class="logo">
+          <img src="https://janzolabs.com/wp-content/uploads/2026/01/IMG_1305.png" alt="Janzo Labs" class="logo-img">
+        </a>
         <nav>
           <a href="https://janzolabs.com/shop/">Products</a>
           <a href="https://janzolabs.com/lab-results/">Lab Results</a>
@@ -1364,7 +1361,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo">JANZO <span>LABS</span></div>
+          <div class="logo"><img src="https://janzolabs.com/wp-content/uploads/2026/01/IMG_1305.png" alt="Janzo Labs" class="logo-img"></div>
           <p class="footer-tagline">Precision peptides for serious researchers. 98%+ purity. Verified. Guaranteed.</p>
         </div>
         <div>
